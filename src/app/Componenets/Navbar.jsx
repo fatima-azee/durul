@@ -2,8 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import {
+  FaChevronDown,
+  FaBars,
+  FaTimes,
+  FaSearch,
+  FaUser,
+  FaShoppingBag,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const navItems = [
   { title: "About Us", path: "/about-us" },
@@ -40,130 +48,177 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
 
-  const toggleDropdown = (title) => {
-    setActiveDropdown(activeDropdown === title ? null : title);
-  };
-
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = document.getElementById("hero-section")?.offsetHeight || 500;
+      const heroHeight =
+        document.getElementById("hero-section")?.offsetHeight || 500;
       setScrolledPastHero(window.scrollY > heroHeight);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleDropdown = (title) => {
+    setActiveDropdown((prev) => (prev === title ? null : title));
+  };
+
+  const iconColor = scrolledPastHero ? "text-black" : "text-white";
+
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 shadow-md transition-colors duration-300 ${
-        scrolledPastHero ? "bg-white text-black" : "text-white"
-      }`}
-    >
-      <div className="container mx-auto px-6 py-0 flex items-center justify-between mt-8">
-        {/* Logo */}
-        <Link href="/" className="flex items-center pl-4">
-          <Image
-            src={scrolledPastHero ? "/images/logo-2.png" : "/images/logo-1.png"}
-            alt="Logo"
-            width={100}
-            height={100}
-            className="mr-2 transition duration-300"
-          />
-        </Link>
+    <>
+      {/* --- TOP BAR (WhatsApp) --- */}
+{/* --- TOP BAR (WhatsApp) --- */}
+<div className="fixed top-0 left-0 w-full z-[60] bg-transparent">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <div className="h-9 flex items-center justify-end text-sm">
+      <a
+        href="https://wa.me/923290137325?text=Hi%20DURUL%20HAIR%20OIL%20—%20I%20Want%20to%20order."
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`flex items-center gap-2 font-medium ${
+          scrolledPastHero ? "text-gray-800" : "text-black"
+        } hover:text-green-600 transition`}
+        aria-label="Chat with us on WhatsApp"
+      >
+        <FaWhatsapp className="text-green-600 text-lg" />
+        <span>+92 329 0137325</span>
+      </a>
+    </div>
+  </div>
+</div>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:flex space-x-10 items-center pl-40 pr-0">
-          {navItems.map((item, index) =>
-            item.subItems ? (
-              <div key={index} className="relative group">
-                <button className="flex items-center gap-1 hover:text-red-400">
-                  {item.title} <FaChevronDown className="text-xs mt-0.5" />
-                </button>
-                <div className="absolute left-0 top-full mt-2 bg-white text-black rounded shadow-lg w-44 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300 z-50">
-                  {item.subItems.map((sub, subIndex) => (
-                    <Link
-                      key={subIndex}
-                      href={sub.path}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {sub.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={index}
-                href={item.path}
-                className="hover:text-red-400"
+
+      {/* --- NAVBAR (offset by top bar height) --- */}
+      <nav
+        className={`fixed top-9 left-0 w-full z-50 transition-colors duration-300 ${
+          scrolledPastHero ? "bg-white text-black shadow-md" : "text-white"
+        }`}
+        role="navigation"
+        aria-label="Main"
+      >
+        {/* Main row */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative flex items-center justify-between h-10">
+            {/* Left: Hamburger */}
+            <div className="flex items-center">
+              <button
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
+                className={`p-2 ${iconColor}`}
               >
-                {item.title}
-              </Link>
-            )
-          )}
-        </div>
-
-        {/* Hamburger Icon - Mobile Only */}
-        <div className="lg:hidden pr-20">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? (
-              <FaTimes className="text-2xl text-black" />
-            ) : (
-              <FaBars className="text-2xl" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="lg:hidden bg-white text-black px-6 pt-6 pb-6 space-y-4 rounded-b-lg">
-          {navItems.map((item, index) => (
-            <div key={index}>
-              {item.subItems ? (
-                <div>
-                  <button
-                    onClick={() => toggleDropdown(item.title)}
-                    className="w-full flex justify-between items-center font-semibold text-left hover:text-red-300"
-                  >
-                    {item.title} <FaChevronDown className="text-xs" />
-                  </button>
-                  {activeDropdown === item.title && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.subItems.map((sub, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          href={sub.path}
-                          className="block hover:text-red-400"
-                        >
-                          {sub.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  href={item.path}
-                  className="block font-semibold hover:text-red-400"
-                >
-                  {item.title}
-                </Link>
-              )}
+                <FaBars className="text-2xl text-black" />
+              </button>
             </div>
-          ))}
-          <Link
-            href="/get-started"
-            className="inline-block bg-[#7D090F] text-white px-5 py-2 rounded-full font-semibold tracking-wide transition hover:opacity-90"
-          >
-            GET STARTED
-          </Link>
-        </div>
-      )}
 
-      {/* Silver Grey Bottom Line */}
-      <div className="w-[70%] mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bcbcbc] to-transparent opacity-70 mt-1" />
-    </nav>
+            {/* Center: Logo */}
+            <Link
+              href="/"
+              className="absolute left-1/2 -translate-x-1/2 flex items-center"
+              aria-label="Go to homepage"
+            >
+              <Image
+                src={scrolledPastHero ? "/images/logo.png" : "/images/logo.png"}
+                alt="Logo"
+                width={64}
+                height={64}
+                className="h-12 w-12 sm:h-40 sm:w-40 object-contain transition duration-300"
+                priority
+              />
+            </Link>
+
+            {/* Right: Icons */}
+            <div className="ml-auto flex items-center gap-6">
+              <button aria-label="Search" className={`p-2 ${iconColor}`}>
+                <FaSearch className="text-xl text-black" />
+              </button>
+              <Link href="/account" aria-label="Sign in" className={`p-2 ${iconColor}`}>
+                <FaUser className="text-xl text-black" />
+              </Link>
+              <Link href="/cart" aria-label="Cart" className={`p-2 ${iconColor}`}>
+                <FaShoppingBag className="text-xl text-black" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="w-[70%] mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bcbcbc] to-transparent opacity-70" />
+
+        {/* Mobile/Side Drawer Menu */}
+        {menuOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-[60]"
+              onClick={() => setMenuOpen(false)}
+            />
+            <aside className="fixed inset-y-0 left-0 z-[70] w-80 max-w-[85%] bg-white text-black shadow-2xl p-6 overflow-y-auto">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-lg font-semibold">Menu</span>
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close menu"
+                  className="p-2 text-black"
+                >
+                  <FaTimes className="text-2xl" />
+                </button>
+              </div>
+
+              <nav className="space-y-3">
+                {navItems.map((item, idx) => (
+                  <div key={idx}>
+                    {item.subItems ? (
+                      <div>
+                        <button
+                          onClick={() => toggleDropdown(item.title)}
+                          className="w-full flex justify-between items-center font-medium text-left hover:text-red-600"
+                          aria-expanded={activeDropdown === item.title}
+                        >
+                          {item.title}
+                          <FaChevronDown
+                            className={`text-xs transition-transform ${
+                              activeDropdown === item.title ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                        {activeDropdown === item.title && (
+                          <div className="ml-3 mt-2 space-y-2">
+                            {item.subItems.map((sub, sIdx) => (
+                              <Link
+                                key={sIdx}
+                                href={sub.path}
+                                className="block text-sm hover:text-red-600"
+                                onClick={() => setMenuOpen(false)}
+                              >
+                                {sub.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.path}
+                        className="block font-medium hover:text-red-600"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+
+                <Link
+                  href="/get-started"
+                  className="inline-block mt-2 bg-[#7D090F] text-white px-5 py-2 rounded-full font-semibold tracking-wide transition hover:opacity-90"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  GET STARTED
+                </Link>
+              </nav>
+            </aside>
+          </>
+        )}
+      </nav>
+    </>
   );
 }
