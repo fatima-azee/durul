@@ -15,29 +15,8 @@ import {
 
 const navItems = [
   { title: "About Us", path: "/about-us" },
-  {
-    title: "Services",
-    subItems: [
-      { title: "Concept Development", path: "/" },
-      { title: "Financial Feasibility", path: "/" },
-      { title: "Location Assessment", path: "/" },
-      { title: "Interior Design", path: "/" },
-      { title: "Kitchen Design & Tender", path: "/" },
-      { title: "Menu Engineering", path: "/" },
-      { title: "HR Support", path: "/" },
-      { title: "OS & E Advice", path: "/" },
-      { title: "Staff Training", path: "/" },
-      { title: "Marketing Coordination", path: "/" },
-    ],
-  },
-  {
-    title: "Post - Opening Operations Management",
-    subItems: [
-      { title: "Operations Management", path: "/" },
-      { title: "HR Management", path: "/" },
-      { title: "Accounts & Cost Control", path: "/" },
-    ],
-  },
+  
+
   { title: "Case Studies", path: "/" },
   { title: "Blog", path: "/" },
   { title: "Contact Us", path: "/contact-us" },
@@ -212,7 +191,7 @@ export default function Navbar() {
                   className="inline-block mt-2 bg-[#7D090F] text-white px-5 py-2 rounded-full font-semibold tracking-wide transition hover:opacity-90"
                   onClick={() => setMenuOpen(false)}
                 >
-                  GET STARTED
+                  BUY NOW
                 </Link>
               </nav>
             </aside>

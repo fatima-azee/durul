@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Restaurant Hospitality Dubai | Luxury F&B Services | Dice Hospitality',
+  title: 'Durul Hair Oil',
   description:
-    'Explore expert restaurant design tips, trends, and project inspirations from Dubai and around the world.',
+    'Durul hair oil',
   metadataBase: new URL('https://dicehospitality.ae/'), // ✅ Fixed: no trailing slash
   openGraph: {
     title: 'Restaurant Hospitality Dubai | Luxury F&B Services | Dice Hospitality',
