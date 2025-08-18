@@ -1,35 +1,34 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Durul Hair Oil',
-  description:
-    'Durul hair oil',
-  metadataBase: new URL('https://dicehospitality.ae/'), // ✅ Fixed: no trailing slash
+  title: "Durul Hair Oil",
+  description: "Durul Hair Oil - Nourishment and strength for your hair.",
+  metadataBase: new URL("https://durulhairoil.pk"), // ✅ Base domain
   openGraph: {
-    title: 'Restaurant Hospitality Dubai | Luxury F&B Services | Dice Hospitality',
+    title: "Durul Hair Oil | Premium Hair Care in Pakistan",
     description:
-      'Explore expert restaurant design tips, trends, and project inspirations from Dubai and around the world.',
-    url: 'https://dicehospitality.ae/',
-    siteName: 'dice hospitality',
+      "Durul Hair Oil strengthens, nourishes, and revitalizes your hair naturally. Scientifically proven formula for healthier, shinier hair.",
+    url: "https://durulhairoil.pk",
+    siteName: "Durul Hair Oil",
     images: [
       {
-        url: 'https://dicehospitality.ae/images/logo.svg', // ✅ Absolute URL
+        url: "https://durulhairoil.pk/images/logo.svg", // ✅ Replace with your actual logo/banner
         width: 1200,
         height: 630,
-        alt: 'Dice Hospitality Banner',
+        alt: "Durul Hair Oil Banner",
       },
     ],
-    type: 'website',
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Restaurant Hospitality Dubai | Luxury F&B Services | Dice Hospitality',
+    card: "summary_large_image",
+    title: "Durul Hair Oil | Premium Hair Care in Pakistan",
     description:
-      'Explore expert restaurant design tips, trends, and project inspirations from Dubai and around the world.',
-    images: ['https://dicehospitality.ae/images/logo.svg'],
+      "Durul Hair Oil strengthens, nourishes, and revitalizes your hair naturally. Scientifically proven formula for healthier, shinier hair.",
+    images: ["https://durulhairoil.pk/images/logo.svg"],
   },
   alternates: {
-    canonical: 'https://dicehospitality.ae/',
+    canonical: "https://durulhairoil.pk",
   },
 };
 
@@ -37,8 +36,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Manual Canonical Override (Backup Fix) */}
-        <link rel="canonical" href="https://dicehospitality.ae/" />
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://durulhairoil.pk" />
 
         {/* Robots Meta Tag */}
         <meta
@@ -51,19 +50,19 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'dice hospitality',
-              url: 'https://dicehospitality.ae/',
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Durul Hair Oil",
+              url: "https://durulhairoil.pk",
               logo: {
-                '@type': 'ImageObject',
-                url: 'https://dicehospitality.ae/images/logo.svg',
+                "@type": "ImageObject",
+                url: "https://durulhairoil.pk/images/logo.svg",
                 width: 600,
                 height: 60,
               },
               sameAs: [
-                'https://www.instagram.com/yourprofile',
-                'https://www.facebook.com/yourprofile',
+                "https://www.instagram.com/durulhairoil",
+                "https://www.facebook.com/durulhairoil",
               ],
             }),
           }}
@@ -74,49 +73,39 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebPage',
-              name: 'dice hospitality',
-              url: 'https://dicehospitality.ae/',
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Durul Hair Oil",
+              url: "https://durulhairoil.pk",
               description:
-                'Explore expert restaurant design tips, trends, and project inspirations from Dubai and around the world.',
+                "Durul Hair Oil strengthens, nourishes, and revitalizes your hair naturally. Scientifically proven formula for healthier, shinier hair.",
             }),
           }}
         />
 
-        {/* BlogPosting Schema */}
+        {/* Product Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
-              headline: 'Modern Restaurant Hospitality in Dubai',
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: "Durul Hair Oil",
+              image: "https://durulhairoil.pk/images/product.png",
               description:
-                'Explore expert restaurant design tips, trends, and project inspirations from Dubai and around the world.',
-              url: 'https://dicehospitality.ae/',
-              author: {
-                '@type': 'Organization',
-                name: 'dice hospitality',
+                "Premium Durul Hair Oil for stronger, shinier, and healthier hair. Scientifically formulated with natural ingredients.",
+              brand: {
+                "@type": "Brand",
+                name: "Durul",
               },
-              publisher: {
-                '@type': 'Organization',
-                name: 'dice hospitality',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://dicehospitality.ae/images/logo.svg',
-                  width: 600,
-                  height: 60,
-                },
+              sku: "DHO-001",
+              offers: {
+                "@type": "Offer",
+                url: "https://durulhairoil.pk",
+                priceCurrency: "PKR",
+                price: "1200",
+                availability: "http://schema.org/InStock",
               },
-              mainEntityOfPage: 'https://dicehospitality.ae/',
-              image: {
-                '@type': 'ImageObject',
-                url: 'https://dicehospitality.ae/images/logo.svg',
-                width: 1200,
-                height: 630,
-              },
-              datePublished: '2025-06-22',
             }),
           }}
         />
@@ -126,81 +115,53 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ItemList',
+              "@context": "https://schema.org",
+              "@type": "ItemList",
               itemListElement: [
                 {
-                  '@type': 'SiteNavigationElement',
+                  "@type": "SiteNavigationElement",
                   position: 1,
-                  name: 'About Us',
-                  url: 'https://dicehospitality.ae/about-us',
+                  name: "About Us",
+                  url: "https://durulhairoil.pk/about-us",
                 },
                 {
-                  '@type': 'SiteNavigationElement',
+                  "@type": "SiteNavigationElement",
                   position: 2,
-                  name: 'Restaurant Design',
-                  url: 'https://dicehospitality.ae/restaurant-design',
+                  name: "Shop",
+                  url: "https://durulhairoil.pk/shop",
                 },
                 {
-                  '@type': 'SiteNavigationElement',
+                  "@type": "SiteNavigationElement",
                   position: 3,
-                  name: 'Kitchen Fit-Out',
-                  url: 'https://dicehospitality.ae/kitchen-fit-out',
+                  name: "Technology",
+                  url: "https://durulhairoil.pk/technology",
                 },
                 {
-                  '@type': 'SiteNavigationElement',
+                  "@type": "SiteNavigationElement",
                   position: 4,
-                  name: 'Gallery',
-                  url: 'https://dicehospitality.ae/projects',
-                },
-                {
-                  '@type': 'SiteNavigationElement',
-                  position: 5,
-                  name: 'Contact Us',
-                  url: 'https://dicehospitality.ae/contact-us',
+                  name: "Contact Us",
+                  url: "https://durulhairoil.pk/contact-us",
                 },
               ],
             }),
           }}
         />
 
-        {/* BreadcrumbList Schema */}
+        {/* Breadcrumb Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
               itemListElement: [
                 {
-                  '@type': 'ListItem',
+                  "@type": "ListItem",
                   position: 1,
-                  name: 'Home',
-                  item: 'https://dicehospitality.ae/',
+                  name: "Home",
+                  item: "https://durulhairoil.pk",
                 },
               ],
-            }),
-          }}
-        />
-
-        {/* Service Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Service',
-              serviceType: 'Restaurant Hospitality and Fit Out',
-              provider: {
-                '@type': 'Organization',
-                name: 'dice hospitality',
-                url: 'https://dicehospitality.ae',
-              },
-              areaServed: {
-                '@type': 'Place',
-                name: 'Dubai, UAE',
-              },
-              url: 'https://dicehospitality.ae/',
             }),
           }}
         />
