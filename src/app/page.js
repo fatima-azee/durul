@@ -7,6 +7,9 @@ import EPerformance from "./Componenets/EPerformance";
 import Composition from "./Componenets/Composition";
 import SProven from "./Componenets/SProven";
 import Special from "./Componenets/Special";
+import SHeroes from "./Componenets/SHeroes";
+import CStory from "./Componenets/CStory";
+import CTA from "./Componenets/CTA";
 import Footer from "./Componenets/Footer";
 
 
@@ -24,6 +27,10 @@ export default function Home() {
         <Composition />
         <SProven />
         <Special />
+        <SHeroes />
+        <CStory />
+        <CTA />
+
         
           <Footer />
          
