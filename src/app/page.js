@@ -3,7 +3,10 @@ import CallButton from "./Componenets/CallButton";
 import WhatsAppButton from "./Componenets/WhatsAppButton";
 import HeroSection from "./Componenets/HeroSection";
 import AboutSection from "./Componenets/AboutSection";
-import Services from "./Componenets/Services";
+import EPerformance from "./Componenets/EPerformance";
+import Composition from "./Componenets/Composition";
+import SProven from "./Componenets/SProven";
+import Special from "./Componenets/Special";
 import Footer from "./Componenets/Footer";
 
 
@@ -17,7 +20,10 @@ export default function Home() {
         <WhatsAppButton />
         <HeroSection />
         <AboutSection />
-        <Services />
+        <EPerformance />
+        <Composition />
+        <SProven />
+        <Special />
         
           <Footer />
          
