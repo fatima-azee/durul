@@ -2,12 +2,12 @@ import Navbar from "./Componenets/Navbar";
 import CallButton from "./Componenets/CallButton";
 import WhatsAppButton from "./Componenets/WhatsAppButton";
 import HeroSection from "./Componenets/HeroSection";
-import AboutSection from "./Componenets/AboutSection";
-import EPerformance from "./Componenets/EPerformance";
-import Composition from "./Componenets/Composition";
-import SProven from "./Componenets/SProven";
-import Special from "./Componenets/Special";
-import SHeroes from "./Componenets/SHeroes";
+import SignatureSection from "./Componenets/SignatureSection";
+import CleanEthicalSection from "./Componenets/CleanEthicalSection";
+import VersatileCareSection from "./Componenets/VersatileCareSection";
+import BenefitsColumns from "./Componenets/BenefitsColumns";
+import FAQSection from "./Componenets/FAQSection";
+import CTAFeatureBanner from "./Componenets/CTAFeatureBanner";
 import CStory from "./Componenets/CStory";
 import CTA from "./Componenets/CTA";
 import Footer from "./Componenets/Footer";
@@ -22,16 +22,12 @@ export default function Home() {
         <CallButton />
         <WhatsAppButton />
         <HeroSection />
-        <AboutSection />
-        <EPerformance />
-        <Composition />
-        <SProven />
-        <Special />
-        <SHeroes />
-        <CStory />
-        <CTA />
-
-        
+        <SignatureSection />
+        <CleanEthicalSection />
+        <VersatileCareSection />
+        <BenefitsColumns />
+        < FAQSection />
+        <CTAFeatureBanner />
           <Footer />
          
 

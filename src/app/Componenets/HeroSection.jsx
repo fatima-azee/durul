@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -8,53 +7,82 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="relative min-h-[92vh] bg-[#fdfcf9] text-[#1c1c1c] overflow-hidden"
+      className="relative min-h-[92vh] overflow-hidden"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_40%,#f5f0e6_0%,#fdfcf9_60%,#fffdf7_100%)]" />
+      {/* background image */}
+      <Image
+        src="/images/hero-bg.png"
+        alt="Hero background"
+        fill
+        priority
+        className="object-cover object-center z-0"
+      />
 
-      {/* Huge background word */}
-      <motion.h1
-  initial={{ opacity: 0, y: 30, scale: 0.98 }}
-  animate={{ opacity: 1, y: 0, scale: 1 }}
-  transition={{ duration: 0.7, ease: "easeOut" }}
-  className="pointer-events-none select-none absolute z-0 w-full text-left font-extrabold tracking-tight
-             text-[20vw] leading-none md:text-7xl pl-8 mt-50 
-             bg-gradient-to-r from-[#6e4b1f] via-[#8b5e2c] to-[#c9973f] bg-clip-text text-transparent"
-  aria-hidden="true"
->
-  DURUL HAIR OIL
-</motion.h1>
-
-
-      {/* Content grid */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-28 md:pt-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center">
-          {/* Left copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+      {/* content */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-24 md:pt-28">
+        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-y-10">
+          
+          {/* Left card */}
+          <motion.aside
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="md:col-span-5 max-w-md md:max-w-none"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:col-span-3 w-full"
           >
-            <p className="uppercase text-[11px] tracking-[0.22em] text-[#5c5348] mb-5">
-              We believe that hair care is not just a routine;
-              it’s a journey towards confidence, vitality, and self-expression.
-            </p>
-          </motion.div>
+            <div className="backdrop-blur-[2px] bg-white/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm text-center">
+              {/* Badge */}
+              <Image
+                src="/images/badge.png"
+                alt="100% natural"
+                width={72}
+                height={72}
+                className="mx-auto"
+              />
 
-          {/* Center floating product */}
+              {/* Model image */}
+              <div className="mt-4 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/model.png"
+                  alt="Healthy, voluminous hair"
+                  width={640}
+                  height={480}
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* Heading */}
+              <h3 className="mt-4 text-lg font-semibold text-slate-800">
+                Nature's Essence
+              </h3>
+
+              {/* Paragraph */}
+              <p className="mt-2 text-sm text-slate-600">
+                Urban Eden blends pure botanicals, crafting hair wellness
+                rooted in natural, ethical care.
+              </p>
+
+              {/* Link */}
+              <a
+                href="/order-now"
+                className="mt-3 inline-flex text-sm font-semibold text-slate-800 hover:underline"
+              >
+                View Details
+              </a>
+            </div>
+          </motion.aside>
+
+          {/* Center product */}
           <motion.div
-            initial={{ opacity: 0, y: 30, rotate: -8 }}
-            animate={{ opacity: 1, y: 0, rotate: -12 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="md:col-span-4 flex justify-center md:justify-center my-10 md:my-0"
+            initial={{ opacity: 0, y: 24, rotate: -6 }}
+            animate={{ opacity: 1, y: 0, rotate: -8 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
+            className="md:col-span-4 flex justify-center md:justify-center relative z-10"
           >
             <div className="relative">
-              <div className="absolute -inset-10 blur-3xl bg-[#f5eedd]/40 rounded-full" />
+              <div className="absolute -inset-10 blur-3xl bg-amber-100/40 rounded-full" />
               <Image
                 src="/images/oil.png"
-                alt="Durul Hair Oil"
+                alt="Urban Eden hair oil bottle"
                 width={560}
                 height={560}
                 priority
@@ -63,47 +91,50 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right CTA card */}
+          {/* Right copy */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="md:col-span-3 md:justify-self-end"
+            transition={{ duration: 0.5 }}
+            className="md:col-span-5 md:col-start-8"
           >
-            <div className="backdrop-blur-[2px] bg-white/80 border border-[#e6ddcf] rounded-2xl p-5 md:p-6 w-full md:w-[320px] shadow-sm">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-base font-semibold leading-snug text-[#1c1c1c]">
-                  Durul Hair Oil
-                </h3>
-                <a
-                  href="#buy"
-                  className="shrink-0 inline-flex items-center justify-center rounded-full border border-[#d6cbbd] px-4 py-2 text-sm font-semibold hover:bg-[#d6cbbd] hover:text-white transition"
-                >
-                  Buy Now
-                </a>
-              </div>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-teal-800/80">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-teal-900/20">
+                🌿
+              </span>
+              Urban Eden Botanical Boost
+            </div>
 
-              <ul className="grid grid-cols-3 gap-3 text-[12px] text-[#6b6154]">
-                <li className="flex items-center gap-2 whitespace-nowrap">
-                  <span className="inline-block h-4 w-4 rounded-full border border-[#c4b7a5]" />
-                  Sulfate free
-                </li>
-                <li className="flex items-center gap-2 whitespace-nowrap">
-                  <span className="inline-block h-4 w-4 rounded-full border border-[#c4b7a5]" />
-                  Paraben free
-                </li>
-                <li className="flex items-center gap-2 whitespace-nowrap">
-                  <span className="inline-block h-4 w-4 rounded-full border border-[#c4b7a5]" />
-                  Silicone free
-                </li>
-              </ul>
+            <h1 className="mt-4 text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight text-slate-800">
+              Transform Your Hair's Vitality
+            </h1>
+
+            <p className="mt-4 text-[15px] leading-7 text-slate-700 max-w-md">
+              Nourish, strengthen, and revitalize with our ultimate hair oil.
+              Crafted with potent botanicals, it delivers healthier, stronger
+              hair from root to tip.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="/order-now"
+                className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90"
+              >
+                Buy Now
+              </a>
+              <a
+                href="/order-now"
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+              >
+                Contact Us
+              </a>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Bottom roll shadow */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#f0e9dc] to-transparent pointer-events-none" />
+      {/* bottom fade */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/60 to-transparent z-10" />
     </section>
   );
 }
