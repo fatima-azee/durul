@@ -25,10 +25,10 @@ export default function SignatureSection() {
             Unveiling the Power of Pure Botanicals
           </div>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-800">
-            Urban Eden's Signature: Natural Excellence
+            VITALIST's Signature: DURUL Hair Oil A Natural Excellence
           </h2>
           <p className="mt-3 text-[15px] leading-7 text-slate-600">
-            Experience the pinnacle of natural hair care with Urban Eden's Revitalizing Oil, meticulously crafted to
+            Experience the pinnacle of natural hair care with VITALIST's Revitalizing Oil, meticulously crafted to
             nourish, strengthen, and revitalize, unlocking your hair's inherent beauty.
           </p>
         </motion.div>

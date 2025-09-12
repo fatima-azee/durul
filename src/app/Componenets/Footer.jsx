@@ -30,10 +30,10 @@ export default function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
               <Image src="/images/logo.png" alt="Logo" width={40} height={40} className="h-10 w-10" />
-              <span className="text-lg font-semibold tracking-wide">URBAN EDEN</span>
+              <span className="text-lg font-semibold tracking-wide">VITALIST</span>
             </div>
             <p className="mt-4 text-sm text-white/80 max-w-sm">
-              Discover Urban Eden’s natural hair revitalizing oil. Crafted with Biotin and botanical oils, our cruelty‑free formula strengthens shine and vitality.
+              Discover VITALIST's natural hair revitalizing oil. Crafted with Biotin and botanical oils, our cruelty‑free formula strengthens shine and vitality.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-sm font-semibold tracking-wide text-white/90">STAY RADIANT</h3>
             <p className="mt-4 text-sm text-white/80">
-              Join our Urban Eden community! Subscribe for exclusive offers, hair care tips, and updates on our natural revitalizing products.
+              Join our VITALIST community! Subscribe for exclusive offers, hair care tips, and updates on our natural revitalizing products.
             </p>
             <form className="mt-4 flex items-center gap-2">
               <input

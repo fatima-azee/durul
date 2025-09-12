@@ -1,9 +1,9 @@
 import Navbar from "../Componenets/Navbar";
 import CallButton from "../Componenets/CallButton";
 import WhatsAppButton from "../Componenets/WhatsAppButton";
-import VHeroSection from "./VHeroSection"
+
 import VPBody from "./VPBody";
-import IdServices from "./IdServices";
+
 import Footer from "../Componenets/Footer";
 
 
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <Navbar className="absolute top-0 z-10 w-screen" />
 
       {/* Hero Image Section */}
-      <VHeroSection />
+     
 
       {/* Floating Action Buttons */}
       <CallButton />
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
 
       {/* Projects Grid Section */}
       <VPBody />
-      <IdServices />
+     
 
       {/* Footer Section */}
       <Footer />

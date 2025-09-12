@@ -57,7 +57,7 @@ export default function HeroSection() {
 
               {/* Paragraph */}
               <p className="mt-2 text-sm text-slate-600">
-                Urban Eden blends pure botanicals, crafting hair wellness
+                Durul Hair oil by VITALIST blends pure botanicals, crafting hair wellness
                 rooted in natural, ethical care.
               </p>
 
@@ -82,7 +82,7 @@ export default function HeroSection() {
               <div className="absolute -inset-10 blur-3xl bg-amber-100/40 rounded-full" />
               <Image
                 src="/images/oil.png"
-                alt="Urban Eden hair oil bottle"
+                alt="durul hair oil bottle"
                 width={560}
                 height={560}
                 priority
@@ -102,7 +102,7 @@ export default function HeroSection() {
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-teal-900/20">
                 🌿
               </span>
-              Urban Eden Botanical Boost
+              VITALIST's Botanical Boost
             </div>
 
             <h1 className="mt-4 text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight text-slate-800">

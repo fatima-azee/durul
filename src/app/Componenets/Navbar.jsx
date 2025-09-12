@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="bg-slate-900 text-slate-100 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-center gap-2">
           <Star className="h-3.5 w-3.5" aria-hidden />
-          <p className="tracking-wide">Unlock Your Hair&apos;s Botanical Beauty.</p>
+          <p className="tracking-wide">Unlock Your Hair&apos;s VITALIST Beauty.</p>
         </div>
       </div>
 
