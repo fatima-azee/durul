@@ -49,8 +49,8 @@ const CBody = () => {
             <h2 className="text-3xl font-semibold mb-6 tracking-wide">GET IN TOUCH</h2>
 
             <div className="space-y-2 mb-6">
-              <p><strong>Dubai, UAE</strong> &nbsp; +971 55 522 8866</p>
-              <p className="text-[#7D090F]">info@dicehospitality.ae</p>
+              <p><strong>Backside DHQ near Wapda office, Sargodha, Punjab Pakistan</strong> &nbsp; +92 329 0137325</p>
+              <p className="text-[#7D090F]">durulhairoil@gmail.com</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
