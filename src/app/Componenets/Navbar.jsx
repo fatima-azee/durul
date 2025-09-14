@@ -7,8 +7,8 @@ import { Menu, X, Search, User, ShoppingBag, ChevronDown, Star } from "lucide-re
 
 const navItems = [
   { title: "Home", href: "/" },
-  { title: "Our Products", href: "/products" },
-  { title: "Shop", href: "/shop" },
+  { title: "Our Products", href: "/order-now" },
+  { title: "Shop", href: "/order-now" },
   { title: "About", href: "/about-us" },
   { title: "Contact Us", href: "/contact-us" },
 ];

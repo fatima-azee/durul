@@ -109,7 +109,7 @@ export default function HeroSection() {
                 </div>
 
                 <Image
-                  src="/images/model-h.jpg"
+                  src="/images/model-h.webp"
                   alt="Healthy, voluminous hair"
                   width={1200}
                   height={900}
