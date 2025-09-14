@@ -64,7 +64,7 @@ export default function CleanEthicalSection() {
             <div className="md:ml-6 rounded-2xl backdrop-blur p-2 shadow-[0_20px_40px_rgba(0,0,0,0.25)">
               <div className="overflow-hidden rounded-xl">
                 <Image
-                  src="/images/ethical-model.png"
+                  src="/images/curly-hair.png"
                   alt="Radiant curly hair model"
                   width={900}
                   height={700}

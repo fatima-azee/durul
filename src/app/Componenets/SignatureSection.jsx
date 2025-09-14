@@ -44,8 +44,15 @@ export default function SignatureSection() {
             className="md:col-span-5"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-200/70">
-              <Image src="/images/scene.png" alt="Self-care routine at home" width={900} height={650} className="w-full h-auto" />
-            </div>
+  <Image
+    src="/images/ethical-model.png"
+    alt="Self-care routine at home"
+    width={900}
+    height={650}
+    className="w-full h-auto scale-110"
+  />
+</div>
+
           </motion.div>
 
           {/* right copy + bullets + ctas */}

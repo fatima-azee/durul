@@ -19,7 +19,7 @@ export default function VersatileCareSection() {
         >
           <div className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-200/70">
             <Image
-              src="/images/couple.png"
+              src="/images/couple-model.png"
               alt="Happy couple with healthy hair"
               width={900}
               height={650}

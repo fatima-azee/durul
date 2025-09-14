@@ -1,3 +1,4 @@
+// app/components/HeroSection.tsx
 "use client";
 
 import Image from "next/image";
@@ -5,136 +6,143 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section
-      id="hero-section"
-      className="relative min-h-[92vh] overflow-hidden"
-    >
-      {/* background image */}
+    <section id="hero-section" className="relative min-h-[92vh] overflow-hidden">
+      {/* Background image */}
       <Image
         src="/images/hero-bg.png"
-        alt="Hero background"
+        alt="Leafy botanical background"
         fill
         priority
         className="object-cover object-center z-0"
       />
 
-      {/* content */}
+      {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-24 md:pt-28">
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-y-10">
+        {/* Desktop: 35% / 30% / 35% */}
+        <div className="grid grid-cols-1 md:grid-cols-[35%_30%_35%] items-start md:gap-x-8 gap-y-10">
           
-          {/* Left card */}
-          <motion.aside
-            initial={{ opacity: 0, y: 24 }}
+          {/* LEFT: arranged as SS */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-3 w-full"
+            transition={{ duration: 0.5 }}
+            className="md:self-start md:pr-4"
           >
-            <div className="backdrop-blur-[2px] bg-white/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm text-center">
-              {/* Badge */}
-              <Image
-                src="/images/badge.png"
-                alt="100% natural"
-                width={72}
-                height={72}
-                className="mx-auto"
-              />
+            {/* small label */}
+            <div className="mt-20 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-teal-800/80">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-teal-900/20">
+                🌿
+              </span>
+              VITALIST's Natural Boost
+            </div>
 
-              {/* Model image */}
-              <div className="mt-4 overflow-hidden rounded-xl">
-                <Image
-                  src="/images/model.png"
-                  alt="Healthy, voluminous hair"
-                  width={640}
-                  height={480}
-                  className="w-full h-auto"
-                />
-              </div>
+            {/* big 3-line headline like SS */}
+            <h1 className="mt-3 font-extrabold text-slate-800 tracking-[-0.02em] leading-[1.04] text-5xl sm:text-6xl md:text-5xl">
+              <span className="block">Transform Your Hair&apos;s Vitality</span>
+            </h1>
 
-              {/* Heading */}
-              <h3 className="mt-4 text-lg font-semibold text-slate-800">
-                Nature's Essence
-              </h3>
+            {/* compact paragraph width like SS */}
+            <p className="mt-4 text-[15px] leading-7 text-slate-700 max-w-[36ch]">
+              Nourish, strengthen, and revitalize with our ultimate hair oil.
+              Crafted with potent botanicals, it delivers healthier, stronger
+              hair from root to tip.
+            </p>
 
-              {/* Paragraph */}
-              <p className="mt-2 text-sm text-slate-600">
-                Durul Hair oil by VITALIST blends pure botanicals, crafting hair wellness
-                rooted in natural, ethical care.
-              </p>
-
-              {/* Link */}
+            {/* buttons row (dark + amber) */}
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/order-now"
-                className="mt-3 inline-flex text-sm font-semibold text-slate-800 hover:underline"
+                className="inline-flex items-center justify-center rounded-lg bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-slate-950"
               >
-                View Details
+                Buy Now
+              </a>
+              <a
+                href="/order-now"
+                className="inline-flex items-center justify-center rounded-lg bg-amber-600 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-amber-700"
+              >
+                Buy On Whats App
               </a>
             </div>
-          </motion.aside>
+          </motion.div>
 
-          {/* Center product */}
+          {/* CENTER: Product bottle (column = 30%) */}
           <motion.div
-            initial={{ opacity: 0, y: 24, rotate: -6 }}
-            animate={{ opacity: 1, y: 0, rotate: -8 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-            className="md:col-span-4 flex justify-center md:justify-center relative z-10"
+            className="flex justify-center relative z-10"
           >
-            <div className="relative">
-              <div className="absolute -inset-10 blur-3xl bg-amber-100/40 rounded-full" />
+            <div className="relative mt-10">
+              {/* Soft glow behind bottle */}
+              <div aria-hidden className="absolute rounded-full" />
               <Image
                 src="/images/oil.png"
-                alt="durul hair oil bottle"
-                width={560}
-                height={560}
+                alt="Durul Hair Oil bottle"
+                width={620}
+                height={620}
+                sizes="(min-width:1280px) 24rem, (min-width:1024px) 22rem, 60vw"
                 priority
                 className="relative drop-shadow-[0_25px_40px_rgba(0,0,0,0.25)]"
               />
             </div>
           </motion.div>
 
-          {/* Right copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          {/* RIGHT: badge ABOVE the model image; left-aligned text (column = 35%) */}
+          <motion.aside
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="md:col-span-5 md:col-start-8"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:self-start w-full"
           >
-            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-teal-800/80">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-teal-900/20">
-                🌿
-              </span>
-              VITALIST's Botanical Boost
+            {/* Badge on top (not overlay) + model image */}
+            <div className="w-full">
+              <div className="mx-auto md:mx-0 w-[90%] md:w-[92%]">
+                <div className="flex justify-center">
+                  <Image
+                    src="/images/badge.png"
+                    alt="100% Natural"
+                    width={180}
+                    height={180}
+                    className="drop-shadow-md mb-2"
+                    priority
+                  />
+                </div>
+
+                <Image
+                  src="/images/model.jpg"
+                  alt="Healthy, voluminous hair"
+                  width={1200}
+                  height={900}
+                  sizes="(min-width:1280px) 22rem, (min-width:1024px) 20rem, 70vw"
+                  className="w-[12rem] md:w-[20rem] lg:w-[22rem] h-auto rounded-2xl border border-slate-200 shadow-sm"
+                  priority
+                />
+              </div>
             </div>
 
-            <h1 className="mt-4 text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight text-slate-800">
-              Transform Your Hair's Vitality
-            </h1>
+            {/* Text below the image */}
+            <div className="mt-5 md:text-left">
+              <h3 className="text-[22px] sm:text-2xl font-semibold tracking-tight text-slate-800">
+                Nature&apos;s Essence
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Durul Hair Oil by VITALIST blends pure botanicals, crafting hair
+                wellness rooted in natural, ethical care.
+              </p>
 
-            <p className="mt-4 text-[15px] leading-7 text-slate-700 max-w-md">
-              Nourish, strengthen, and revitalize with our ultimate hair oil.
-              Crafted with potent botanicals, it delivers healthier, stronger
-              hair from root to tip.
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="/order-now"
-                className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90"
+                className="mt-2 inline-flex text-sm font-semibold text-slate-800 underline underline-offset-4 decoration-slate-300 hover:decoration-slate-800 mb-10"
               >
-                Buy Now
-              </a>
-              <a
-                href="/order-now"
-                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-              >
-                Contact Us
+                View Details
               </a>
             </div>
-          </motion.div>
+          </motion.aside>
         </div>
       </div>
 
-      {/* bottom fade */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/60 to-transparent z-10" />
+      {/* Bottom fade */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/70 to-transparent z-10" />
     </section>
   );
 }
