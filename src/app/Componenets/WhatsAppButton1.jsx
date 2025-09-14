@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton1 = () => {
-  const [whatsappNumber] = useState('YOUR_WhatsApp_NUMBER');
+  const [whatsappNumber] = useState('+923290137325');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const WhatsAppButton1 = () => {
 
   const handleClick = () => {
     // Format the WhatsApp URL with your number
-    const whatsappUrl = `https://wa.me/${+971555228866}`;
+    const whatsappUrl = `https://wa.me/${+923290137325}`;
     // Open the WhatsApp URL in a new tab
     window.open(whatsappUrl, '_blank');
   };

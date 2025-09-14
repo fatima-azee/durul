@@ -8,15 +8,15 @@ export default function Footer() {
   const company = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about-us" },
-    { label: "Hair Oil", href: "/products/hair-oil" },
+    { label: "Hair Oil", href: "/products/order-now" },
     { label: "Contact Us", href: "/contact-us" },
   ];
 
   const informations = [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Return and Refund Policy", href: "/returns" },
-    { label: "Terms and Conditions", href: "/terms" },
-    { label: "Wishlist", href: "/wishlist" },
+    { label: "Privacy Policy", href: "/" },
+    { label: "Return and Refund Policy", href: "/" },
+    { label: "Terms and Conditions", href: "/" },
+    { label: "Wishlist", href: "/" },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Brand + blurb */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo.png" alt="Logo" width={40} height={40} className="h-10 w-10" />
+              <Image src="/images/logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto" />
               <span className="text-lg font-semibold tracking-wide">VITALIST</span>
             </div>
             <p className="mt-4 text-sm text-white/80 max-w-sm">

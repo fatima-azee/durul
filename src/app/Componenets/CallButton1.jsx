@@ -2,11 +2,11 @@
 import { FaPhoneAlt } from "react-icons/fa";
 
 const CallButton1 = () => {
-  const phoneNumber = '+971555228866';
+  const phoneNumber = '+923290137325';
 
   const handleClick = () => {
     // Format the phone number
-    const formattedPhoneNumber = `tel:${+971555228866}`;
+    const formattedPhoneNumber = `tel:${+923290137325}`;
     // Initiate the call
     window.location.href = formattedPhoneNumber;
   };
