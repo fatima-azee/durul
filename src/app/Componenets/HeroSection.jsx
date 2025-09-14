@@ -29,7 +29,7 @@ export default function HeroSection() {
             className="md:self-start md:pr-4"
           >
             {/* small label */}
-            <div className="mt-20 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-teal-800/80">
+            <div className=" mt-4 md:mt-20 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-teal-800/80">
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-teal-900/20">
                 🌿
               </span>
@@ -108,15 +108,16 @@ export default function HeroSection() {
                   />
                 </div>
 
-                <Image
-                  src="/images/model-h.webp"
-                  alt="Healthy, voluminous hair"
-                  width={1200}
-                  height={900}
-                  sizes="(min-width:1280px) 22rem, (min-width:1024px) 20rem, 70vw"
-                  className="w-[12rem] md:w-[20rem] lg:w-[22rem] h-auto rounded-2xl border border-slate-200 shadow-sm"
-                  priority
-                />
+              <Image
+  src="/images/model-h.webp"
+  alt="Healthy, voluminous hair"
+  width={1200}
+  height={900}
+  sizes="(min-width:1280px) 22rem, (min-width:1024px) 20rem, 70vw"
+  className="w-[20rem] md:w-[20rem] lg:w-[22rem] h-auto rounded-2xl border border-slate-200 shadow-sm mx-auto md:mx-0"
+  priority
+/>
+
               </div>
             </div>
 
