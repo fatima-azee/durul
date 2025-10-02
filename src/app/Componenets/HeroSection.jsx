@@ -52,13 +52,13 @@ export default function HeroSection() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/order-now"
-                className="inline-flex items-center justify-center rounded-lg bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-slate-950"
+                className="inline-flex items-center justify-center rounded-lg bg-slate-700 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-slate-900"
               >
                 Buy Now
               </a>
               <a
                 href="/order-now"
-                className="inline-flex items-center justify-center rounded-lg bg-amber-600 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-amber-700"
+                className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-green-700"
               >
                 Buy On Whats App
               </a>

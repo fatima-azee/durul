@@ -60,7 +60,7 @@ export default function VersatileCareSection() {
 
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-slate-900 text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90">Buy Now</a>
-            <a href="/order-now" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
+            <a href="/contact-us" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
           </div>
         </motion.div>
       </div>

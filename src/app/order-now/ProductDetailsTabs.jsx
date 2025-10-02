@@ -68,7 +68,7 @@ export default function ProductDetailsTabs() {
             </button>
           ))}
           <div className="ml-auto hidden md:block text-xs text-gray-400 font-semibold py-3 select-none uppercase tracking-wide">
-            Add to Basket
+            
           </div>
         </div>
 

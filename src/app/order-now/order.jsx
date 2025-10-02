@@ -15,8 +15,8 @@ const PRODUCT = {
   short:
     "VITALIST's natural Boost is a 100% natural hair and scalp oil, enriched with Rosemary, Castor, Biotin, and other potent botanicals. Experience stronger, healthier hair with reduced breakage and enhanced shine.",
   gallery: ["/images/2.png", "/images/3.png", "/images/1.png"],
-  category: { name: "Hair & Scalp Oil", href: "/category/hair-oil" },
-  brand: { name: "Urban Eden", href: "/brand/urban-eden" },
+  category: { name: "Hair & Scalp Oil", href: "/order-now" },
+  brand: { name: "VITALIST", href: "/" },
 };
 
 // Your WhatsApp number in international format (no + sign)

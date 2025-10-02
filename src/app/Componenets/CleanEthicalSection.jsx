@@ -49,7 +49,7 @@ export default function CleanEthicalSection() {
 
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-white text-slate-900 px-5 py-2.5 text-sm font-semibold hover:opacity-90">Buy Now</a>
-              <a href="/order-now" className="inline-flex items-center justify-center rounded-md border border-white/70 bg-transparent px-5 py-2.5 text-sm font-semibold hover:bg-white/10">Contact Us</a>
+              <a href="/contact-us" className="inline-flex items-center justify-center rounded-md border border-white/70 bg-transparent px-5 py-2.5 text-sm font-semibold hover:bg-white/10">Contact Us</a>
             </div>
           </motion.div>
 

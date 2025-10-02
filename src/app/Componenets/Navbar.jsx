@@ -7,7 +7,6 @@ import { Menu, X, Search, User, ShoppingBag, ChevronDown, Star } from "lucide-re
 
 const navItems = [
   { title: "Home", href: "/" },
-  { title: "Our Products", href: "/order-now" },
   { title: "Shop", href: "/order-now" },
   { title: "About", href: "/about-us" },
   { title: "Contact Us", href: "/contact-us" },
@@ -63,7 +62,7 @@ export default function Navbar() {
                   alt="Logo"
                   width={40}
                   height={40}
-                  className="h-10 w-10 object-contain"
+                  className="h-auto w-40 object-contain"
                   priority
                 />
                 <span className="sr-only">Go to homepage</span>
@@ -86,11 +85,7 @@ export default function Navbar() {
               <button aria-label="Search" className="p-2 rounded-md hover:bg-slate-100">
                 <Search className="h-5 w-5" />
               </button>
-              <Link href="/account" aria-label="My account" className="hidden sm:inline-flex">
-                <span className="inline-flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-full text-sm font-semibold hover:opacity-90">
-                  <User className="h-4 w-4" /> My Account
-                </span>
-              </Link>
+          
               <Link href="/cart" aria-label="Cart" className="p-2 rounded-md hover:bg-slate-100">
                 <ShoppingBag className="h-5 w-5" />
               </Link>

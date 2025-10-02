@@ -22,7 +22,7 @@ export default function SignatureSection() {
         >
           <div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-slate-600/80">
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-slate-300">🌿</span>
-            Unveiling the Power of Pure Botanicals
+            Unveiling the Power of Natural & Organic Ingredients
           </div>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-800">
             VITALIST's Signature: DURUL Hair Oil A Natural Excellence
@@ -44,14 +44,14 @@ export default function SignatureSection() {
             className="md:col-span-5"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-200/70">
-  <Image
-    src="/images/ethical-model.png"
-    alt="Self-care routine at home"
-    width={900}
-    height={650}
-    className="w-full h-auto scale-110"
-  />
-</div>
+            <Image
+              src="/images/ethical-model.png"
+              alt="Self-care routine at home"
+              width={900}
+              height={650}
+              className="w-full h-auto scale-110"
+              />
+          </div>
 
           </motion.div>
 
@@ -86,7 +86,7 @@ export default function SignatureSection() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-slate-900 text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90">Buy Now</a>
-              <a href="/order-now" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
+              <a href="/contact-us" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
             </div>
           </motion.div>
         </div>

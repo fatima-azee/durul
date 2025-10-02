@@ -8,7 +8,7 @@ export default function Footer() {
   const company = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about-us" },
-    { label: "Hair Oil", href: "/products/order-now" },
+    { label: "Hair Oil", href: "/order-now" },
     { label: "Contact Us", href: "/contact-us" },
   ];
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 border-t border-white/15 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between text-white/70 text-xs">
-          <p>© {new Date().getFullYear()} Urban Eden. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VITALIST. All rights reserved.</p>
           <div className="mt-3 md:mt-0 inline-flex items-center gap-5">
             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>

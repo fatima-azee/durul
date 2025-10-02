@@ -46,10 +46,10 @@ export default function BenefitsColumns() {
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
         <div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-slate-600/80">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-slate-300">🌿</span>
-          Botanical Synergy for Ultimate Hair Health
+          VITALIST Synergy for Ultimate Hair Health
         </div>
         <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-800">
-          Urban Eden's Natural Hair Revival
+          Natural Hair Revival by DURUL Hair Oil
         </h2>
         <p className="mt-2 text-[15px] leading-7 text-slate-600">
           Experience the transformative power of nature with our blend of potent oils, designed to nourish,
@@ -98,7 +98,7 @@ export default function BenefitsColumns() {
           {/* CTAs under the card */}
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-slate-900 text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90">Buy Now</a>
-            <a href="/order-now" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
+            <a href="/contact-us" className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50">Contact Us</a>
           </div>
         </motion.div>
 

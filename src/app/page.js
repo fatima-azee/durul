@@ -8,8 +8,6 @@ import VersatileCareSection from "./Componenets/VersatileCareSection";
 import BenefitsColumns from "./Componenets/BenefitsColumns";
 import FAQSection from "./Componenets/FAQSection";
 import CTAFeatureBanner from "./Componenets/CTAFeatureBanner";
-import CStory from "./Componenets/CStory";
-import CTA from "./Componenets/CTA";
 import Footer from "./Componenets/Footer";
 
 

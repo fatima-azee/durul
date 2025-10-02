@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CTAFeatureBanner() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden mb-10">
       {/* panel background with subtle leaf pattern */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mt-8 rounded-3xl bg-[#4a6464] text-white p-6 md:p-10 lg:p-14">
@@ -24,12 +24,12 @@ export default function CTAFeatureBanner() {
                 Embrace Natural Hair Vitality
               </h2>
               <p className="mt-3 text-white/85 text-[15px] leading-7 max-w-xl">
-                Discover the power of botanical blends. Nourish, strengthen, and revitalize your hair with Urban Eden. Start your journey to healthier, radiant hair now.
+                Discover the power of botanical blends. Nourish, strengthen, and revitalize your hair with Durul hair oil. Start your journey to healthier, radiant hair now.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-white text-slate-900 px-5 py-2.5 text-sm font-semibold hover:opacity-90">Buy Now</a>
-                <a href="/order-now" className="inline-flex items-center justify-center rounded-md bg-[#c8965a] text-white px-5 py-2.5 text-sm font-semibold hover:opacity-95">Contact Us</a>
+                <a href="/contact-us" className="inline-flex items-center justify-center rounded-md bg-[#c8965a] text-white px-5 py-2.5 text-sm font-semibold hover:opacity-95">Contact Us</a>
               </div>
             </div>
 
