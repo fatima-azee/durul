@@ -17,7 +17,7 @@ const Email = () => {
         onClick={handleEmailClick}
         className="bg-[#c38d90] text-white font-bold py-2 px-4 rounded"
       >
-        Send Enquiry Now
+        Send Enquiry
       </button>
     );
   };
