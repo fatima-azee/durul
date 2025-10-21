@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 
 const CBody = () => {
@@ -9,8 +9,21 @@ const CBody = () => {
     email: "",
     phone: "",
     message: "",
+    __hp: "", // honeypot
   });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v || "");
+  const canSubmit = useMemo(() => {
+    return (
+      formData.name.trim().length >= 2 &&
+      isEmail(formData.email) &&
+      formData.subject.trim().length >= 2 &&
+      formData.message.trim().length >= 5 &&
+      !submitting
+    );
+  }, [formData, submitting]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,24 +32,50 @@ const CBody = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus({ type: "", message: "" });
+
+    // quick client-side checks
+    if (!canSubmit) {
+      setStatus({ type: "error", message: "Please complete all required fields properly." });
+      return;
+    }
+
     try {
+      setSubmitting(true);
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          subject: formData.subject.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          message: formData.message.trim(),
+          __hp: formData.__hp, // honeypot
+        }),
       });
-      if (res.ok) {
+
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data?.ok) {
         setFormData({
           name: "",
           subject: "",
           email: "",
           phone: "",
           message: "",
+          __hp: "",
         });
-        setStatus("Thank you! We will get back to you soon.");
-      } else throw new Error();
+        setStatus({ type: "success", message: "Thank you! We will get back to you soon." });
+      } else {
+        setStatus({
+          type: "error",
+          message: data?.error || "Something went wrong. Please try again.",
+        });
+      }
     } catch {
-      setStatus("Something went wrong. Please try again.");
+      setStatus({ type: "error", message: "Network error. Please try again." });
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -49,31 +88,47 @@ const CBody = () => {
             <h2 className="text-3xl font-semibold mb-6 tracking-wide">GET IN TOUCH</h2>
 
             <div className="space-y-2 mb-6">
-              <p><strong>Backside DHQ near Wapda office, Sargodha, Punjab Pakistan</strong> &nbsp; +92 329 0137325</p>
+              <p>
+                <strong>Backside DHQ near Wapda office, Sargodha, Punjab Pakistan</strong>
+                &nbsp; +92 329 0137325
+              </p>
               <p className="text-[#7D090F]">durulhairoil@gmail.com</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+              {/* Honeypot (hidden) */}
+              <input
+                type="text"
+                name="__hp"
+                value={formData.__hp}
+                onChange={handleChange}
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   name="name"
-                  placeholder="First Name"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  autoComplete="name"
                   className="border border-[#7D090F] px-4 py-2 w-full"
                 />
                 <input
                   type="text"
                   name="subject"
-                  placeholder="Last Name"
+                  placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
                   required
                   className="border border-[#7D090F] px-4 py-2 w-full"
                 />
               </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="email"
@@ -82,38 +137,52 @@ const CBody = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  autoComplete="email"
                   className="border border-[#7D090F] px-4 py-2 w-full"
                 />
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone"
+                  placeholder="Phone (optional)"
                   value={formData.phone}
                   onChange={handleChange}
-                  required
+                  autoComplete="tel"
                   className="border border-[#7D090F] px-4 py-2 w-full"
                 />
               </div>
+
               <textarea
                 name="message"
-                placeholder="Tell us how can we help you"
+                placeholder="Tell us how we can help you"
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
                 className="border border-[#7D090F] px-4 py-2 w-full resize-none"
                 required
-              ></textarea>
+              />
+
               <div className="flex justify-center pt-2">
                 <button
                   type="submit"
-                  className="bg-[#7D090F] text-white px-10 py-2"
+                  disabled={!canSubmit}
+                  className={`px-10 py-2 text-white ${
+                    submitting || !canSubmit ? "bg-[#7D090F]/70 cursor-not-allowed" : "bg-[#7D090F]"
+                  }`}
                 >
-                  SUBMIT
+                  {submitting ? "SENDING..." : "SUBMIT"}
                 </button>
               </div>
             </form>
 
-            {status && <p className="mt-4 text-sm text-[#7D090F]">{status}</p>}
+            {status.message && (
+              <p
+                className={`mt-4 text-sm ${
+                  status.type === "success" ? "text-green-600" : "text-[#7D090F]"
+                }`}
+              >
+                {status.message}
+              </p>
+            )}
           </div>
         </div>
 
