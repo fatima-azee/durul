@@ -24,7 +24,7 @@ export default function CTAFeatureBanner() {
                 Embrace Natural Hair Vitality
               </h2>
               <p className="mt-3 text-white/85 text-[15px] leading-7 max-w-xl">
-                Discover the power of botanical blends. Nourish, strengthen, and revitalize your hair with Durul hair oil. Start your journey to healthier, radiant hair now.
+                Experience the strength of homeopathic care. Rejuvenate, fortify, and restore your hair with Durul Hair Oil — begin your journey toward naturally healthy, confident, and radiant hair today..
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">

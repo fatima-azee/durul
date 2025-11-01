@@ -37,9 +37,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-4 text-base leading-7 text-white/85 max-w-xl mx-auto md:mx-0">
-              Discover VITALIST&apos;s natural hair revitalizing oil. Crafted with
-              Biotin and botanical oils, our cruelty-free formula strengthens shine
-              and vitality.
+              DExplore VitalGlow’s homeopathic hair revitalizing oil — a unique blend of Arnica, Jaborandi, and Phosphoric Acid. This gentle, nature-inspired formula restores strength, enhances shine, and revives your hair’s natural vitality.
             </p>
           </div>
 
@@ -73,15 +71,9 @@ export default function Footer() {
           </p>
 
           <div className="order-1 md:order-2 w-full md:w-auto flex flex-wrap items-center justify-start md:justify-end gap-x-6 gap-y-2">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms
-            </Link>
-            <Link href="/cookies" className="hover:text-white transition-colors">
-              Cookies
-            </Link>
+            <span>Privacy Policy</span>
+            <span>Terms</span>
+            <span>Cookies</span>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const PRODUCT = {
   currency: "PKR",
   compareAt: 2000,
   short:
-    "VITALIST's natural Boost is a 100% natural hair and scalp oil, enriched with Rosemary, Castor, Biotin, and other potent botanicals. Experience stronger, healthier hair with reduced breakage and enhanced shine.",
+    "VITALIST's  Homeopathic Boost is a 100% natural hair and scalp oil enriched with Arnica, Jaborandi, and Phosphoric Acid. Experience revitalized, stronger hair with reduced fall, improved growth, and a healthy, radiant shine.",
   gallery: ["/images/1.png", "/images/4.png", "/images/5.png", "/images/6.png", "/images/2.png", "/images/3.png"],
   category: { name: "Hair & Scalp Oil", href: "/order-now" },
   brand: { name: "VITALIST", href: "/" },

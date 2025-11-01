@@ -28,8 +28,8 @@ export default function SignatureSection() {
             VITALIST's Signature: DURUL Hair Oil A Natural Excellence
           </h2>
           <p className="mt-3 text-[15px] leading-7 text-slate-600">
-            Experience the pinnacle of natural hair care with VITALIST's Revitalizing Oil, meticulously crafted to
-            nourish, strengthen, and revitalize, unlocking your hair's inherent beauty.
+            Pure Vitality
+            Discover the essence of homeopathic hair care with VITALIST Revitalizing Oil, thoughtfully formulated to restore strength, nourish deeply, and awaken your hair’s natural radiance.
           </p>
         </motion.div>
 
@@ -63,10 +63,9 @@ export default function SignatureSection() {
             transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
             className="md:col-span-7"
           >
-            <h3 className="text-2xl sm:text-[28px] font-semibold text-slate-800">Potent Botanical Fusion :</h3>
+            <h3 className="text-2xl sm:text-[28px] font-semibold text-slate-800">Powerful Homeopathic Blend:</h3>
             <p className="mt-3 text-slate-600 text-[15px] leading-7 max-w-2xl">
-              Our Revitalizing Hair Oil combines Rosemary, Castor, Biotin, and other natural oils, each chosen for its proven
-              ability to nourish, strengthen, and revitalize hair from the root, promoting overall hair health.
+              Our Revitalizing Hair Oil unites Arnica, Jaborandi, and Phosphoric Acid, along with select natural oils—each renowned for their restorative power to rejuvenate the scalp, strengthen roots, and revive dull, thinning hair.
             </p>
 
             <ul className="mt-5 space-y-3 text-slate-700">
@@ -74,13 +73,13 @@ export default function SignatureSection() {
                 <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-white">
                   <Check className="h-3.5 w-3.5" />
                 </span>
-                <span>Deeply nourishes and strengthens hair follicles for reduced breakage.</span>
+                <span>Deeply nourishes and fortifies follicles to minimize breakage.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-white">
                   <Check className="h-3.5 w-3.5" />
                 </span>
-                <span>Stimulates scalp circulation, supporting healthy hair growth and thickness.</span>
+                <span>Enhances scalp vitality, encouraging natural growth, shine, and resilience.</span>
               </li>
             </ul>
 

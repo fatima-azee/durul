@@ -9,16 +9,16 @@ export default function BenefitsColumns() {
     {
       title: "Deep Hydration &\nMoisture Lock",
       body:
-        "Argan, Jojoba, Avocado & Sweet Almond Oils deeply nourish for silky, frizz‑free hair.",
+        "Arnica, Jaborandi, and Phosphoric Acid work in harmony to deeply nourish the scalp, promoting smoother, stronger, and naturally lustrous hair free from frizz and dryness.",
     },
     {
       title: "Shiny & Soft Strands",
-      body: "Grapeseed, Coconut, and Palm Oils add a natural, radiant shine.",
+      body: "Homeopathic essences blended with nourishing oils restore vitality and deliver a natural, healthy shine, leaving your hair radiant and full of life.",
     },
     {
       title: "Healthy Scalp &\nDandruff Control",
       body:
-        "Tea Tree, Rosemary & Peppermint Oils refresh, soothe & promote a balanced scalp.",
+        "Arnica, Jaborandi, and Phosphoric Acid gently purify and calm the scalp, restoring natural balance while refreshing and revitalizing from root to tip.",
     },
   ];
 
@@ -26,17 +26,17 @@ export default function BenefitsColumns() {
     {
       title: "Stronger, Thicker Hair",
       body:
-        "Castor, Biotin (Vitamin B7) & Pumpkin Seed Oil support hair growth and reduce breakage.",
+        "Arnica, Jaborandi, and Phosphoric Acid synergize to stimulate healthy hair growth, strengthen roots, and reduce thinning and breakage for fuller, resilient hair.",
     },
     {
       title: "Ultimate Protection",
       body:
-        "Rosehip and Patchouli Oils are packed with antioxidants to shield hair from damage.",
+        "Enriched with homeopathic actives and natural antioxidants, VitalGlow protects hair from damage, strengthening each strand while preserving its natural shine and vitality.",
     },
     {
       title: "Aromatherapy & Relaxation",
       body:
-        "Lavender and Rosemary Oils provide a calming scent while nourishing your hair.",
+        "Infused with soothing homeopathic botanicals, VITALIST offers a gentle, calming aroma while deeply nourishing the scalp and restoring your hair’s natural balance and softness.",
     },
   ];
 

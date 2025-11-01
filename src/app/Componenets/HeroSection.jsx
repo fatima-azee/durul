@@ -43,9 +43,7 @@ export default function HeroSection() {
 
             {/* compact paragraph width like SS */}
             <p className="mt-4 text-[15px] leading-7 text-slate-700 max-w-[36ch]">
-              Nourish, strengthen, and revitalize with our ultimate hair oil.
-              Crafted with potent botanicals, it delivers healthier, stronger
-              hair from root to tip.
+              Revive, restore, and rejuvenate with our premium homeopathic hair oil. Enriched with natural essences, it strengthens every strand, promoting vibrant, confident hair from root to tip.
             </p>
 
             {/* buttons row (dark + amber) */}
@@ -127,8 +125,7 @@ export default function HeroSection() {
                 Nature&apos;s Essence
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Durul Hair Oil by VITALIST blends pure botanicals, crafting hair
-                wellness rooted in natural, ethical care.
+                Durul Hair Oil by VITALIST infuses powerful plant essences, creating holistic hair nourishment inspired by nature and perfected through homeopathic care.
               </p>
 
               <a

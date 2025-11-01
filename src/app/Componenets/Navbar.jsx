@@ -118,20 +118,7 @@ export default function Navbar() {
 
             {/* Right: Actions */}
             <div className="flex items-center gap-2">
-              <button
-                aria-label="Search"
-                className="p-2 rounded-md hover:bg-slate-100"
-              >
-                <Search className="h-5 w-5" />
-              </button>
-
-              <Link
-                href="/cart"
-                aria-label="Cart"
-                className="p-2 rounded-md hover:bg-slate-100"
-              >
-                <ShoppingBag className="h-5 w-5" />
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -171,7 +158,7 @@ export default function Navbar() {
               ))}
 
               <Link
-                href="/shop"
+                href="/order-now"
                 className="mt-2 inline-flex items-center justify-center w-full rounded-full bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
                 onClick={() => setDrawerOpen(false)}
               >
