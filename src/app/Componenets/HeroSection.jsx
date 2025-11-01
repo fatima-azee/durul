@@ -72,11 +72,11 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
             className="flex justify-center relative z-10"
           >
-            <div className="relative mt-10">
+            <div className="relative mr-15">
               {/* Soft glow behind bottle */}
               <div aria-hidden className="absolute rounded-full" />
               <Image
-                src="/images/oil.png"
+                src="/images/hero-image-p.png"
                 alt="Durul Hair Oil bottle"
                 width={620}
                 height={620}

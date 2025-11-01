@@ -85,7 +85,7 @@ export default function BenefitsColumns() {
           <div className="w-full rounded-2xl shadow-sm">
             <div className="overflow-hidden rounded-xl">
               <Image
-                src="/images/oil-center.png"
+                src="/images/natural-hair.png"
                 alt="Revitalizing hair oil bottle with dropper"
                 width={900}
                 height={900}

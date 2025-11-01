@@ -37,7 +37,7 @@ export default function CTAFeatureBanner() {
             <div className="md:col-span-5">
               <div className="rounded-3xl overflow-hidden bg-white/5 ring-1 ring-white/15 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
                 <Image
-                  src="/images/cta-bottle.png"
+                  src="/images/embrace-vitality.png"
                   alt="Product on pedestal"
                   width={1200}
                   height={900}

@@ -79,10 +79,10 @@ export default function ProductDetailsTabs() {
 
             <div>
               <h3 className="font-semibold text-[#2d3e3f]">
-                Urban Eden Botanical Boost: Revitalizing Hair & Scalp Oil – Unleash Your Hair’s Natural Vitality
+                Product-Specific Information
               </h3>
               <p className="mt-2 leading-7 text-gray-700">
-                Discover the transformative power of nature with Urban Eden’s Botanical Boost Revitalizing Hair & Scalp Oil. This meticulously crafted blend of 100% natural ingredients is your go-to solution for achieving healthier, stronger, and more radiant hair. Our lightweight, non-greasy formula deeply nourishes and revitalizes, addressing common hair concerns while promoting overall scalp health.
+                Our product mainly includes plant essence like Arnica which is effective in managing hair loss owing to its antibacterial and fungicidal properties. This helps clear hidden dirt in the scalp and promotes the natural sebum secretion in the hair. Arnica oil also helps in improving the protein content in the hair follicles, thereby strengthening your hair. Jaborandi helps repair and rejuvenate the scalp, promotes hair growth, and alleviates itching and Phosphoric acid is best for hair falling after exhausting diseases. Hair falls after a fever. Hair loss after grief or loss of fluids. Air thins out, gray early , falls out. Mentally the person is dull and listless. It is useful to treat hair loss that occurs as a result of grief and sorrow. Those needing it experience marked thinning and falling of hair. They may have early greying of hair as well. It is also valuable to treat hair loss occurring in the beard area. These three are mainly used while manufacturing this oil excluding others that makes my formula more effective and efficient. 
               </p>
             </div>
 
@@ -91,15 +91,30 @@ export default function ProductDetailsTabs() {
               <ul className="mt-2 space-y-3">
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
-                  <span><span className="font-medium">Deep Nourishment & Strengthening:</span> Our unique blend penetrates deep into the hair shaft, providing essential nutrients that strengthen from the roots, reducing breakage and promoting robust hair growth.</span>
+                  <span><span className="font-medium">It covers mainly every hair problem such as Dandruff:</span> Characterized by flaky skin on the scalp, often itchy. Hair Loss: Can range from thinning to complete baldness. Dry Scalp: Lack of moisture leading to dryness, itchiness, and flakiness. Frizzy Hair: Hair that is dry, damaged, or lacks moisture, causing it to appear rough and tangled. Heat Damage: Damage to hair from excessive use of heat styling tools. Chemical Damage: Damage from perms, relaxers, or hair dyes. Thinning Hair: Reduction in hair volume and thickness Lack of Shine: Hair appears dull and lifeless Breakage: Hair that easily snaps or breaks. Gray Hair: Hair turning gray, often due to aging or genetics. Scalp Irritation: Redness, itching, or inflammation of the scalp. Traction hair loss: Hair loss caused by tight hairstyles that pull on the hair. Also helps maintain the hair color. </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
-                  <span><span className="font-medium">Reduced Breakage & Enhanced Growth:</span> Formulated with powerful ingredients like Castor Oil, known for its ability to fortify hair follicles, our oil minimizes breakage and encourages healthy growth.</span>
+                  <span><span className="font-medium"><strong>Secret Formula:</strong></span> It contains a specific hair oils (secret formula) that have properties as moisturizing and hair-strengthening, promote hair growth and prevent hair loss,  adding shine and softness to hair, and potentially reducing frizz and dandruff, Thick and rich, it may help with hair growth and scalp health, hair strength and split ends and  calming, moisturizing, and anti-inflammatory properties. Its use can also lead to better sleep.</span>
                 </li>
+                <br></br>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
-                  <span><span className="font-medium">Intense Scalp Hydration & Dryness Relief:</span> Tea Tree and Lavender Oils work synergistically to hydrate and soothe the scalp, combating dryness and irritation for a balanced, healthy environment.</span>
+                  <span><span className="font-medium"><strong>Application Instructions:</strong><br></br><br></br>
+                  </span>
+                 <ol className="list-decimal list-inside space-y-4 text-slate-700">
+                <li>
+                 <strong>Short Treatment (30 minutes to 1 hour):</strong> Perfect for a quick detangling boost or to add shine before styling. Apply the oil to damp hair, focusing on the mid-lengths and ends. Wash thoroughly with mild/baby shampoo afterwards.
+                </li>
+                <li>
+                 <strong>Deep Conditioning (2–3 hours):</strong> Ideal for dry, damaged, or frizzy hair. Massage the oil into your scalp and hair, then cover with a shower cap for enhanced absorption. Wash thoroughly with mild/baby shampoo afterwards.
+                </li>
+                <li>
+                 <strong>Overnight Treatment:</strong> For maximum moisture and nourishment, apply the oil before bed and wash it out in the morning. This is great for very dry or coarse hair.
+                  </li>
+                  </ol>
+
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
@@ -113,15 +128,10 @@ export default function ProductDetailsTabs() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-[#2d3e3f]">Powerful Ingredients for Maximum Results:</h4>
+              <h4 className="font-semibold text-[#2d3e3f]"></h4>
               <ul className="mt-2 space-y-3">
                 {[
-                  ["Rosemary Oil:", "Stimulates scalp circulation, promoting hair growth and thickness."],
-                  ["Castor Oil:", "Deeply nourishes hair follicles, strengthening strands and reducing breakage."],
-                  ["Tea Tree Oil:", "Maintains a healthy scalp by reducing dryness and irritation."],
-                  ["Lavender Oil:", "Soothes the scalp and creates a balanced environment for hair growth."],
-                  ["Biotin (Vitamin B7):", "Strengthens hair from the roots, promoting healthier, more resilient strands."],
-                  ["Plus Other Botanical Oils:", "A complementary blend that works in harmony to deliver exceptional results."],
+                  
                 ].map(([k, v]) => (
                   <li key={k} className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
@@ -132,12 +142,10 @@ export default function ProductDetailsTabs() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-[#2d3e3f]">How to Use:</h4>
+              <h4 className="font-semibold text-[#2d3e3f]"></h4>
               <ul className="mt-2 space-y-3">
                 {[
-                  "Apply a small amount to clean, damp scalp and hair.",
-                  "Massage gently in a circular motion, focusing on thinning or balding areas.",
-                  "Use daily for optimal results, or leave in overnight for deeper hydration.",
+                
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" /><span>{t}</span></li>
                 ))}
