@@ -92,7 +92,7 @@ const CBody = () => {
                 <strong>Backside DHQ near Wapda office, Sargodha, Punjab Pakistan</strong>
                 &nbsp; +92 329 0137325
               </p>
-              <p className="text-[#7D090F]">durulhairoil@gmail.com</p>
+              <p className="text-[#7D090F]">info@durulhairoil.pk</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>

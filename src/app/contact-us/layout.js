@@ -1,10 +1,10 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "Contact Us | Dice Hospitality Dubai, UAE",
+  title: "Contact Us | Durul Hair Oil, Pakistan",
   description:
-    "Dice hospitality, No.1 Restaurant & F&B hospitality company, Dubai, UAE",
-  metadataBase: new URL('https://dicehospitality.ae/'),
+    "Durul Hair Oil, No.1 Hair Oil in Pakistan",
+  metadataBase: new URL('https://durulhairoil.pk/'),
   alternates: {
     canonical: '/contact-us',
   },

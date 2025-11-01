@@ -1,10 +1,10 @@
 import '../globals.css';
 
 export const metadata = {
-  title: "About Us | Dice Hospitality",
+  title: "About Us | Durul Hair Oil by VITALIST",
   description:
-    "Best restaurant hospitality company in Dubai. We are offering professional services of F&B and restaurant services. Contact us today!",
-  metadataBase: new URL('https://dicehospitality.ae/'),
+    "Best hair oil in Pakistan.",
+  metadataBase: new URL('https://durulhairoil.pk/'),
   alternates: {
     canonical: '/about-us',
   },
