@@ -82,18 +82,19 @@ export default function BenefitsColumns() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="md:col-span-4 flex flex-col items-center gap-6"
         >
-          <div className="w-full rounded-2xl shadow-sm">
-            <div className="overflow-hidden rounded-xl">
-              <Image
-                src="/images/natural-hair.png"
-                alt="Revitalizing hair oil bottle with dropper"
-                width={900}
-                height={900}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
-          </div>
+         <div className="w-full rounded-2xl shadow-sm">
+  <div className="overflow-hidden rounded-xl">
+    <Image
+      src="/images/natural-hair.png"
+      alt="Revitalizing hair oil bottle with dropper"
+      width={900}
+      height={900}
+      className="w-full h-auto object-cover scale-150" // zooms in by 10%
+      priority
+    />
+  </div>
+</div>
+
 
           {/* CTAs under the card */}
           <div className="flex flex-wrap justify-center gap-3">

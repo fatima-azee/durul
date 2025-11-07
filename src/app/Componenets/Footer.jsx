@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-4 text-base leading-7 text-white/85 max-w-xl mx-auto md:mx-0">
-              DExplore VitalGlow’s homeopathic hair revitalizing oil — a unique blend of Arnica, Jaborandi, and Phosphoric Acid. This gentle, nature-inspired formula restores strength, enhances shine, and revives your hair’s natural vitality.
+              Explore VIATLIST’s homeopathic hair revitalizing oil — a unique blend of Arnica, Jaborandi, and Phosphoric Acid. This gentle, nature-inspired formula restores strength, enhances shine, and revives your hair’s natural vitality.
             </p>
           </div>
 

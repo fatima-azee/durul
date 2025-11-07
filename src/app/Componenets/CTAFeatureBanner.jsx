@@ -41,7 +41,7 @@ export default function CTAFeatureBanner() {
                   alt="Product on pedestal"
                   width={1200}
                   height={900}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover scale-140"
                   priority
                 />
               </div>
